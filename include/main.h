@@ -1,0 +1,51 @@
+#pragma once
+
+#pragma warning(push, 0)
+// Library Defines
+#define GLEW_STATIC
+#define GLM_FORCE_RADIANS
+
+#ifndef _MSC_VER
+#if __GNUC__ != 4 || __GNUC_MINOR__ < 7
+#define override
+#define nullptr NULL
+#endif
+#endif
+
+// Core Library Includes
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/constants.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+
+// SL/STL/C Includes
+#include <climits>
+#include <vector>
+#include <memory>
+#include <cstdlib>
+#include <ctime>
+#pragma warning(pop)
+
+// Additional Includes
+#include <log.h>
+#include <iostream>
+#include <array>
+#include <algorithm>
+#include <cmath>
+#include "../vs12/glbase/vertexpositionnormal.h"
+
+// Utility Defines
+#define abstract = 0
+#define BAD_BUFFER UINT_MAX
+
+// Core Functions (left to the implementer!)
+void init();
+void render(double dt);
+void deinit();
+
+// Misc Functions
+void onGLFWError(int code, const char* error);
+void debugGLError();
+GLuint loadShader(const char* filename, GLuint shader_type);

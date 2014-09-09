@@ -1,0 +1,3 @@
+/home/felix/Downloads/glbase/src/cmakebuild/glbase/CMakeFiles/glbase.dir
+/home/felix/Downloads/glbase/src/cmakebuild/glew/CMakeFiles/glew.dir
+/home/felix/Downloads/glbase/src/cmakebuild/glfw/CMakeFiles/glfw.dir
